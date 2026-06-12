@@ -154,9 +154,12 @@
     font-family: var(--font-display);
     font-size: 22px;
     font-weight: 900;
+    line-height: 1;
     color: #f5f4f7;
     text-decoration: none;
     letter-spacing: 3px;
+    display: flex;
+    align-items: center;
   }
   nav.scrolled .nav-logo { color: var(--white); }
   .nav-logo span { color: var(--blue); }
@@ -261,33 +264,7 @@
     line-height: 1.8;
     font-weight: 300;
   }
-  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 72px; }
-  .hero-stats {
-    display: flex;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
-  .hero-stat {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    animation: fadeUp 0.6s ease both;
-  }
-  .hero-stat-val {
-    font-family: var(--font-display);
-    font-size: 32px;
-    font-weight: 700;
-    color: #f5f4f7;
-    line-height: 1;
-  }
-  .hero-stat-val span { color: var(--blue); font-size: 20px; }
-  .hero-stat-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-family: var(--font-ui);
-  }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
   .hero-scroll {
     position: absolute;
     bottom: 40px;
@@ -991,7 +968,6 @@
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .hero-title { font-size: clamp(28px, 8vw, 48px); }
-    .hero-stats { gap: 24px; }
     .bikes-grid { grid-template-columns: 1fr; }
     .emi-layout, .ride-layout, .showroom-layout, .contact-layout { grid-template-columns: 1fr; gap: 40px; }
     .footer-top { grid-template-columns: 1fr 1fr; }
@@ -1055,24 +1031,6 @@
       <a href="#bikes" class="btn btn-primary">⚡ Explore Bikes</a>
       <a href="#test-ride" class="btn btn-ghost">🏍 Book Test Ride</a>
       <a href="#emi" class="btn btn-ghost">📊 Get Quote</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat" style="animation-delay:0.1s">
-        <div class="hero-stat-val">220<span>km/h</span></div>
-        <div class="hero-stat-label">Top Speed</div>
-      </div>
-      <div class="hero-stat" style="animation-delay:0.2s">
-        <div class="hero-stat-val">480<span>km</span></div>
-        <div class="hero-stat-label">Range</div>
-      </div>
-      <div class="hero-stat" style="animation-delay:0.3s">
-        <div class="hero-stat-val">45<span>min</span></div>
-        <div class="hero-stat-label">Fast Charge</div>
-      </div>
-      <div class="hero-stat" style="animation-delay:0.4s">
-        <div class="hero-stat-val">5<span>yr</span></div>
-        <div class="hero-stat-label">Warranty</div>
-      </div>
     </div>
   </div>
   <div class="hero-scroll">
